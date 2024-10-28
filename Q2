@@ -1,0 +1,15 @@
+import random
+
+cartas_espadas = ["Ás", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Valete", "Dama", "Rei"]
+random.shuffle(cartas_espadas)
+
+primeira_mao = []
+
+for carta in cartas_espadas:
+    valor_carta = cartas_espadas.index(carta) + 1
+    posicao = 0
+    while posicao < len(primeira_mao) and cartas_espadas.index(primeira_mao[posicao]) + 1 < valor_carta:
+        posicao += 1
+    primeira_mao.insert(posicao, carta)
+
+print("Cartas de espadas ordenadas:", primeira_mao)

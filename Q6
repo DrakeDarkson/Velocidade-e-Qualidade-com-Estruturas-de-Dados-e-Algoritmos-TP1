@@ -1,0 +1,9 @@
+def encontrar_quadrado(quantidade_de_graos):
+    quadrado = 1
+    graos_no_quadrado = 1
+
+    while graos_no_quadrado < quantidade_de_graos:
+        quadrado += 1
+        graos_no_quadrado *= 2
+    
+    return quadrado

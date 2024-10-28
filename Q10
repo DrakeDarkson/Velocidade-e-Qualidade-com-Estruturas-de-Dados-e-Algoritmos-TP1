@@ -1,0 +1,23 @@
+def bubble_sort_strings(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+# Testes
+listas_para_testar = [
+    ["banana", "maçã", "laranja", "uva"],
+    ["cachorro", "gato", "elefante", "abacate"],
+    ["zebra", "gato", "elefante", "cachorro"],
+    ["carro", "bicicleta", "avião", "barco"],
+    [],
+    ["banana"],
+    ["kiwi", "abacaxi", "laranja", "maçã", "banana"]
+]
+
+for i, lista in enumerate(listas_para_testar):
+    print(f"Lista original {i+1}: {lista}")
+    lista_ordenada = bubble_sort_strings(lista)
+    print(f"Lista ordenada {i+1}: {lista_ordenada}\n")

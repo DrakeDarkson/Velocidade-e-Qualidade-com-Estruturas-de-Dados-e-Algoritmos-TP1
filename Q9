@@ -1,0 +1,23 @@
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+# Testes
+listas_para_testar = [
+    [64, 34, 25, 12, 22, 11, 90],
+    [5, 1, 4, 2, 8],
+    [1, 2, 3, 4, 5],
+    [10, 9, 8, 7, 6],
+    [],
+    [3],
+    [1, 2, 3, 1, 2, 1]
+]
+
+for i, lista in enumerate(listas_para_testar):
+    print(f"Lista original {i+1}: {lista}")
+    lista_ordenada = bubble_sort(lista)
+    print(f"Lista ordenada {i+1}: {lista_ordenada}\n")
